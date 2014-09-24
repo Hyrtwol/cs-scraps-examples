@@ -1,0 +1,19 @@
+﻿<Project DefaultTargets="Clean;Prepare;Build;Test" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <MajorVersion>4</MajorVersion>
+    <MinorVersion>0</MinorVersion>
+    <PatchVersion>4</PatchVersion>
+    <ArtifactProjectUrl>http://zino:100/viewType.html?buildTypeId=bt19</ArtifactProjectUrl>
+    <ArtifactIconUrl>http://hyrtwol.dk/icons/hyrtwol.ico</ArtifactIconUrl>
+    <ArtifactLicenseUrl>http://hyrtwol.dk</ArtifactLicenseUrl>
+    <ArtifactCompany>Hyrtwol</ArtifactCompany>
+    <ArtifactCopyright>Copyright $(ArtifactCompany) 2014</ArtifactCopyright>
+    <ArtifactSolution>cs-scraps-examples</ArtifactSolution>
+    <Platform>x86</Platform>
+    <UnitTestForce32Bit>true</UnitTestForce32Bit>
+  </PropertyGroup>
+
+  <Import Project="$(Pantry)\Fry.targets"/>
+
+</Project>

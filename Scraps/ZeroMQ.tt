@@ -1,0 +1,11 @@
+﻿<#
+    var settings = new Dictionary<string, object>()
+    {
+        {"Version", new Version("4.0.4")},
+        {"UseException", true},
+        {"Visibility", "public"},
+        {"DeclareException", true},
+        {"ClassName", "zmq"}
+    };
+#>
+<#@ include file="..\cs-scraps\ZeroMQ.tt" #>

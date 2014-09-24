@@ -1,0 +1,32 @@
+<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ output extension=".md" #>
+# 0MQ C# Examples
+
+Examples for [ZeroMQ](http://zeromq.org/) C# Bindings.
+
+## Links
+
+* [0MQ](http://zeromq.org/)
+* [0MQ API Reference](http://api.zeromq.org/)
+* [Submodule](cszmq)
+
+### zmq.tt
+
+<# foreach (var line in File.ReadAllLines(Host.ResolvePath(@"Scraps\ZeroMQ.tt"))) this.WriteLine("\t"+line); #>
+
+### hwclient.cs
+
+Converted from [hwclient.c](https://github.com/imatix/zguide/blob/master/examples/C/hwclient.c)
+
+<# foreach (var line in File.ReadAllLines(Host.ResolvePath(@"examples\hwclient\hwclient.cs"))) this.WriteLine("\t"+line); #>
+
+### hwserver.cs
+
+Converted from [hwserver.c](https://github.com/imatix/zguide/blob/master/examples/C/hwserver.c)
+
+<# foreach (var line in File.ReadAllLines(Host.ResolvePath(@"examples\hwserver\hwserver.cs"))) this.WriteLine("\t"+line); #>
