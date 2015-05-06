@@ -49,10 +49,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WindowsService.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WindowsService.tt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ZeroMQ.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,6 +90,10 @@
       <Link>Readme.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Readme.md</LastGenOutput>
+    </None>
+    <None Include="WindowsService.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>WindowsService.cs</LastGenOutput>
     </None>
     <None Include="ZeroMQ.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
