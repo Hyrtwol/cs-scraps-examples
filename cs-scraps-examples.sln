@@ -19,6 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".scraps", ".scraps", "{0B25
 		cs-scraps\Readme.md = cs-scraps\Readme.md
 		cs-scraps\ServiceLocatorExtensions.tt = cs-scraps\ServiceLocatorExtensions.tt
 		cs-scraps\Shared.tt = cs-scraps\Shared.tt
+		cs-scraps\ShellLink.tt = cs-scraps\ShellLink.tt
+		cs-scraps\SysUtils.tt = cs-scraps\SysUtils.tt
+		cs-scraps\Vectors.tt = cs-scraps\Vectors.tt
 		cs-scraps\WindowsService.tt = cs-scraps\WindowsService.tt
 		cs-scraps\Worker.tt = cs-scraps\Worker.tt
 		cs-scraps\ZeroMQ.tt = cs-scraps\ZeroMQ.tt
@@ -126,12 +129,12 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{2D8306CF-515B-4B65-9F60-68E48789927A} = {98B056B6-8C11-4DFB-8DC7-E78BF72FE50B}
 		{3D00DDA7-9A4E-4A1E-8062-BC74F76C938E} = {98B056B6-8C11-4DFB-8DC7-E78BF72FE50B}
-		{DD302CBA-0C2E-439D-B472-3BD6A258CFFD} = {3D00DDA7-9A4E-4A1E-8062-BC74F76C938E}
-		{5AECC75D-BA23-433C-926C-704AE5AEBE12} = {3D00DDA7-9A4E-4A1E-8062-BC74F76C938E}
-		{E3F487CD-66CD-4150-A6BB-C0C5FE842B57} = {3D00DDA7-9A4E-4A1E-8062-BC74F76C938E}
+		{2D8306CF-515B-4B65-9F60-68E48789927A} = {98B056B6-8C11-4DFB-8DC7-E78BF72FE50B}
 		{3337C162-B0B3-4C39-A13A-AEEE7CC3D03D} = {3D00DDA7-9A4E-4A1E-8062-BC74F76C938E}
+		{5AECC75D-BA23-433C-926C-704AE5AEBE12} = {3D00DDA7-9A4E-4A1E-8062-BC74F76C938E}
+		{DD302CBA-0C2E-439D-B472-3BD6A258CFFD} = {3D00DDA7-9A4E-4A1E-8062-BC74F76C938E}
+		{E3F487CD-66CD-4150-A6BB-C0C5FE842B57} = {3D00DDA7-9A4E-4A1E-8062-BC74F76C938E}
 		{41A584D9-5D79-4C18-8355-9780EC495468} = {3D00DDA7-9A4E-4A1E-8062-BC74F76C938E}
 	EndGlobalSection
 EndGlobal

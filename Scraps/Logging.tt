@@ -1,0 +1,7 @@
+﻿<#
+    var settings = new Dictionary<string, object>()
+    {
+        {"Visibility", "public"}
+    };
+#>
+<#@ include file="..\cs-scraps\Logging.tt" #>

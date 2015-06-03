@@ -1,7 +1,7 @@
 ﻿// solution configuration : Debug
 // visual studio version: 11.0
 // dll import file: libzmq-v110-mt-4_0_4.dll
-// template file: D:\Git\cs-scraps-examples\Scraps\ZeroMQ.tt
+// template file: D:\Projects\cs-scraps-examples\Scraps\ZeroMQ.tt
 // customToolNamespace: 
 // rootNamespace: Scraps
 // see also:
@@ -590,12 +590,27 @@ namespace Scraps
         ZMQ_REQ_CORRELATE = 52,
         ZMQ_REQ_RELAXED = 53,
         ZMQ_CONFLATE = 54,
-        ZMQ_ZAP_DOMAIN = 55
+        ZMQ_ZAP_DOMAIN = 55,
+        ZMQ_ROUTER_HANDOVER = 56,
+        ZMQ_TOS = 57,
+        ZMQ_IPC_FILTER_PID = 58,
+        ZMQ_IPC_FILTER_UID = 59,
+        ZMQ_IPC_FILTER_GID = 60,
+        ZMQ_CONNECT_RID = 61,
+        ZMQ_GSSAPI_SERVER = 62,
+        ZMQ_GSSAPI_PRINCIPAL = 63,
+        ZMQ_GSSAPI_SERVICE_PRINCIPAL = 64,
+        ZMQ_GSSAPI_PLAINTEXT = 65,
+        ZMQ_HANDSHAKE_IVL = 66,
+        ZMQ_IDENTITY_FD = 67,
+        ZMQ_SOCKS_PROXY = 68
     }
 
     public enum MessageOption
     {
-        ZMQ_MORE = 1
+        ZMQ_MORE = 1,
+        ZMQ_SRCFD = 2,
+        ZMQ_SHARED = 3
     }
 
     public enum SendOption
@@ -619,27 +634,22 @@ namespace Scraps
     [Flags]
     public enum SocketTransportEvent : ushort
     {
-        ZMQ_EVENT_CONNECTED = 1,
-        ZMQ_EVENT_CONNECT_DELAYED = 2,
-        ZMQ_EVENT_CONNECT_RETRIED = 4,
+        ZMQ_EVENT_CONNECTED = 0x0001,
+        ZMQ_EVENT_CONNECT_DELAYED = 0x0002,
+        ZMQ_EVENT_CONNECT_RETRIED = 0x0004,
 
-        ZMQ_EVENT_LISTENING = 8,
-        ZMQ_EVENT_BIND_FAILED = 16,
+        ZMQ_EVENT_LISTENING = 0x0008,
+        ZMQ_EVENT_BIND_FAILED = 0x0010,
 
-        ZMQ_EVENT_ACCEPTED = 32,
-        ZMQ_EVENT_ACCEPT_FAILED = 64,
+        ZMQ_EVENT_ACCEPTED = 0x0020,
+        ZMQ_EVENT_ACCEPT_FAILED = 0x0040,
 
-        ZMQ_EVENT_CLOSED = 128,
-        ZMQ_EVENT_CLOSE_FAILED = 256,
-        ZMQ_EVENT_DISCONNECTED = 512,
-        ZMQ_EVENT_MONITOR_STOPPED = 1024,
+        ZMQ_EVENT_CLOSED = 0x0080,
+        ZMQ_EVENT_CLOSE_FAILED = 0x0100,
+        ZMQ_EVENT_DISCONNECTED = 0x0200,
+        ZMQ_EVENT_MONITOR_STOPPED = 0x0400,
 
-        ZMQ_EVENT_ALL = ZMQ_EVENT_CONNECTED | ZMQ_EVENT_CONNECT_DELAYED |
-                        ZMQ_EVENT_CONNECT_RETRIED | ZMQ_EVENT_LISTENING |
-                        ZMQ_EVENT_BIND_FAILED | ZMQ_EVENT_ACCEPTED |
-                        ZMQ_EVENT_ACCEPT_FAILED | ZMQ_EVENT_CLOSED |
-                        ZMQ_EVENT_CLOSE_FAILED | ZMQ_EVENT_DISCONNECTED |
-                        ZMQ_EVENT_MONITOR_STOPPED
+        ZMQ_EVENT_ALL = 0xFFFF
     }
 
     [Flags]

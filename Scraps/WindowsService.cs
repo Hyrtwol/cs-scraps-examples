@@ -30,34 +30,34 @@ namespace Scraps
 
         public static void Run(IWindowsService service)
         {
-            var texlService = new WindowsService(service);
+            var windowsService = new WindowsService(service);
             if (Environment.UserInteractive)
             {
                 ConfigureConsole();
 
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("   .oOo.   .oOo.   .oOo.    Starting {0}     .oOo.   .oOo.   .oOo.   ", service.Name);
+                Console.WriteLine("   .oOo.   .oOo.   .oOo.    Starting {0}     .oOo.   .oOo.   .oOo.   ", windowsService.ServiceName);
                 Console.ForegroundColor = DefaultColor;
-                texlService.OnStart(null);
+                windowsService.OnStart(null);
 
-                Console.ForegroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("   .oOo.   .oOo.   .oOo.    Press ESC to stop    .oOo.   .oOo.   .oOo.   ");
                 Console.ForegroundColor = DefaultColor;
                 WairForEscape();
 
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("   .oOo.   .oOo.   .oOo.    Stopping {0}     .oOo.   .oOo.   .oOo.   ", service.Name);
+                Console.WriteLine("   .oOo.   .oOo.   .oOo.    Stopping {0}     .oOo.   .oOo.   .oOo.   ", windowsService.ServiceName);
                 Console.ForegroundColor = DefaultColor;
-                texlService.Stop();
+                windowsService.Stop();
 
-                Console.ForegroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("   .oOo.   .oOo.   .oOo.    Press ESC to exit    .oOo.   .oOo.   .oOo.   ");
                 Console.ForegroundColor = DefaultColor;
                 WairForEscape();
             }
             else
             {
-                Run(texlService);
+                Run(windowsService);
             }
         }
 
