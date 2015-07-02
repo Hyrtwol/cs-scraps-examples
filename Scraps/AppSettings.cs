@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
+using System.Linq;
 
 namespace Scraps
 {
@@ -62,6 +64,29 @@ namespace Scraps
             bool res;
             if (!string.IsNullOrEmpty(val) && bool.TryParse(val, out res)) return res;
             return defaultVal;
+        }
+
+        protected static string GetConnectionString(string name)
+        {
+            var settings = GetConnectionStringSettingsByName(name);
+            return settings.ConnectionString;
+        }
+
+        protected static ConnectionStringSettings GetConnectionStringSettingsByName(string name)
+        {
+            try
+            {
+                return GetAllConnectionStringSettings().Single(cs => cs.Name == name);
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException("Unable to find any <connectionStrings> with name '" + name + "' error " + ex.Message, ex);
+            }
+        }
+
+        protected static IEnumerable<ConnectionStringSettings> GetAllConnectionStringSettings()
+        {
+            return ConfigurationManager.ConnectionStrings.Cast<ConnectionStringSettings>();
         }
     }
 }

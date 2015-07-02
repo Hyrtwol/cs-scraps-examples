@@ -1,13 +1,17 @@
 ﻿// solution configuration : Debug
 // visual studio version: 11.0
 // dll import file: libzmq-v110-mt-4_0_4.dll
-// template file: D:\Projects\cs-scraps-examples\Scraps\ZeroMQ.tt
+// template file: D:\Git\cs-scraps-examples\Scraps\ZeroMQ.tt
 // customToolNamespace: 
 // rootNamespace: Scraps
 // see also:
 //   http://api.zeromq.org/4-0:_start
 //   C:\Program Files (x86)\ZeroMQ 4.0.4\include\zmq.h
-
+// ReSharper disable InconsistentNaming
+// ReSharper disable UnusedMember.Global
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable ClassNeverInstantiated.Global
+// ReSharper disable FieldCanBeMadeReadOnly.Global
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
