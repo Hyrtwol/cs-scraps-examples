@@ -8,7 +8,7 @@ using NUnit.Framework;
 namespace Scraps.Test
 {
     [TestFixture]
-    public class InteropTests
+    public class ZMQInteropTests
     {
         [Test]
         public void VerityStructSizes()

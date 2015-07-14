@@ -1,7 +1,7 @@
 ﻿// solution configuration : Debug
 // visual studio version: 11.0
 // dll import file: libzmq-v110-mt-4_0_4.dll
-// template file: D:\Git\cs-scraps-examples\Scraps\ZeroMQ.tt
+// template file: ZeroMQ.tt
 // customToolNamespace: 
 // rootNamespace: Scraps
 // see also:
