@@ -123,7 +123,7 @@ namespace Scraps
                 if (vals.Length == 2) ConsoleUtils.SetWindowPos(vals[0], vals[1]);
             }
         }
-
+		
         private static class ConsoleUtils
         {
             private static readonly IntPtr ThisConsole = GetConsoleWindow();

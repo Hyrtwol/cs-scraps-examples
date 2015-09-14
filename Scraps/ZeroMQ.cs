@@ -1,6 +1,6 @@
 ﻿// solution configuration : Debug
-// visual studio version: 11.0
-// dll import file: libzmq-v110-mt-4_0_4.dll
+// visual studio version: 14.0
+// dll import file: libzmq-v120-mt-4_0_4.dll
 // template file: ZeroMQ.tt
 // customToolNamespace: 
 // rootNamespace: Scraps
@@ -31,7 +31,7 @@ namespace Scraps
         public const int ZMQ_VERSION_MINOR = 0;
         public const int ZMQ_VERSION_PATCH = 4;
 
-        public const string dll = "libzmq-v110-mt-4_0_4.dll";
+        public const string dll = "libzmq-v120-mt-4_0_4.dll";
 
         /// <summary>
         /// Run-time API version detection
